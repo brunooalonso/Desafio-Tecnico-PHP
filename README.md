@@ -24,4 +24,4 @@ Dentro da pasta app, encontram-se as seguintes subpastas:
 - **Views:** Arquivos de visualização responsáveis por definir a apresentação das páginas web, sendo renderizados para os usuários.
 
 # 
-Caso seja necessário, acesse o link: [https://www.preventivapro.com.br/softexpert/painel/](https://www.preventivapro.com.br/softexpert/painel/)
+Caso seja necessário, o link para acessar o sistema em funcionamento também está disponível: [https://www.preventivapro.com.br/softexpert/painel/](https://www.preventivapro.com.br/softexpert/painel/)
