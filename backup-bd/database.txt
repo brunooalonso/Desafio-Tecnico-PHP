@@ -1,0 +1,36 @@
+CREATE TABLE imposto (
+    id_imposto SERIAL PRIMARY KEY,
+    valor_percentual_imposto DECIMAL(18, 2) NOT NULL
+);
+
+CREATE TABLE tipo (
+    id_tipo SERIAL PRIMARY KEY,
+    id_imposto INTEGER REFERENCES imposto(id_imposto) ON DELETE CASCADE,
+    nome_tipo VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE produto (
+    id_produto SERIAL PRIMARY KEY,
+    id_tipo INTEGER REFERENCES tipo(id_tipo) ON DELETE CASCADE,
+    nome_produto VARCHAR(100) NOT NULL,
+    valor_venda_produto DECIMAL(18, 2) NOT NULL
+);
+
+CREATE TABLE venda (
+    id_venda SERIAL PRIMARY KEY,
+    quantidade_total_venda INTEGER NOT NULL,
+    valor_total_venda DECIMAL(18, 2) NOT NULL,
+    valor_total_imposto_venda DECIMAL(18, 2) NOT NULL,
+    data_venda TIMESTAMP
+);
+
+CREATE TABLE venda_produto(
+	id_venda_produto SERIAL PRIMARY KEY,
+	id_venda INTEGER REFERENCES venda(id_venda) ON DELETE CASCADE,
+	id_produto INTEGER REFERENCES produto(id_produto) ON DELETE CASCADE,
+	quantidade_venda_produto INTEGER NOT NULL,
+	valor_produto_venda_produto DECIMAL(18, 2) NOT NULL,
+	valor_total_produto_venda_produto DECIMAL(18, 2) NOT NULL,
+	valor_imposto_venda_produto DECIMAL(18, 2) NOT NULL,
+	valor_total_imposto_venda_produto DECIMAL(18, 2) NOT NULL
+);

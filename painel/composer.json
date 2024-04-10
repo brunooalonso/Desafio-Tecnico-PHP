@@ -1,0 +1,21 @@
+{
+    "name": "softexpert/composer",
+    "description": "Desafio Técnico PHP",
+    "type": "project",
+    "require": {
+        "php": "^7.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Controllers\\": "app/controllers",
+            "App\\Library\\": "app/library",
+            "Config\\": "config/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno Alonso",
+            "email": "brunoalonso96@gmail.com"
+        }
+    ]
+}
