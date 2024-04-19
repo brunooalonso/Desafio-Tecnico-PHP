@@ -22,6 +22,3 @@ Dentro da pasta app, encontram-se as seguintes subpastas:
 - **Handlers:** Responsáveis por manipular a lógica da aplicação, recebendo requisições HTTP e coordenando as operações.
 - **Controllers:** Representam a camada de controle da aplicação, interagindo com o banco de dados e processando dados vindos das requisições handlers.
 - **Views:** Arquivos de visualização responsáveis por definir a apresentação das páginas web, sendo renderizados para os usuários.
-
-# 
-Caso seja necessário, o link para acessar o sistema em funcionamento também está disponível: [https://www.preventivapro.com.br/softexpert/painel/](https://www.preventivapro.com.br/softexpert/painel/)
